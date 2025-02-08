@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bgBody: #fff;
+    --secondColor: #222;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: var(--bgBody);
+}
+
+.contact-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    background-color: #fff;
+}
+
+.contact-left-title {
+    color: var(--secondColor);
+    font-size: 2rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.contact-left-title h2 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: bold;
+} 
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: var(--secondColor);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #444;
+}
+
+.textarea-input {
+    resize: none;
+    height: 150px;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus {
+    border: 2px solid #D95A11;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 1rem;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #D95A11;
+    cursor: pointer;
+    transition: all .4s;
+    color: #fff;
+}
+
+.contact-left button:hover {
+    background-color: #96400f;
+}
+
+.contact-left button img {
+    height: 15px;
+    transition: all .4s;
+}
+
+.contact-left button:hover img {
+    transform: translateX(10px);
+}
+
+.contact-right img {
+    width: 500px;
+}
+
+@media screen and (max-width: 800px) {
+    .contact-container {
+        height: 80vh;
+    }
+
+    .contact-inputs {
+        width: 80vw;
+    }
+
+
+
+    .contact-right {
+        display: none;
+    }
+}
