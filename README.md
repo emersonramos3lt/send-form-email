@@ -19,4 +19,4 @@ design practices, providing a **clean, modern, and fully responsive** experience
 
 # **📷 Screenshot** 
 
-![Screenshot](./screenshot/img1.png)
+![Screenshot](./screenshot/img.png)
