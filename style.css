@@ -1,23 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --bgBody: #fff;
     --secondColor: #222;
+    --mainColor: #07D977;
+    --hover: #0E2626;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", serif;
+    font-family: "Montserrat", serif;
 }
 
 body {
     background-color: var(--bgBody);
 }
 
+/* HEADER & NAV */
+header {
+    border-bottom: 1px solid #000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+
+nav .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav button {
+    all: unset;
+    cursor: pointer;
+    background-color: var(--mainColor);
+    padding: 10px 35px;
+    border-radius: 50px;
+}
+
+/* CONTACT FORM */
 .contact-container {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -39,7 +68,6 @@ body {
 }
 
 .contact-left-title h2 {
-    font-family: "Libre Baskerville", serif;
     font-weight: bold;
 } 
 
@@ -71,7 +99,7 @@ body {
 }
 
 .contact-inputs:focus {
-    border: 2px solid #D95A11;
+    border: 2px solid var(--mainColor);
 }
 
 .contact-left button {
@@ -82,22 +110,21 @@ body {
     gap: 10px;
     border: none;
     border-radius: 50px;
-    background-color: #D95A11;
+    background-color: var(--mainColor);
     cursor: pointer;
     transition: all .4s;
-    color: #fff;
 }
 
 .contact-left button:hover {
-    background-color: #96400f;
+    background-color: var(--hover);
+    color: var(--mainColor);
 }
 
-.contact-left button img {
-    height: 15px;
+.contact-left button i {
     transition: all .4s;
 }
 
-.contact-left button:hover img {
+.contact-left button:hover i {
     transform: translateX(10px);
 }
 
@@ -105,7 +132,8 @@ body {
     width: 500px;
 }
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 900px) {
     .contact-container {
         height: 80vh;
     }
